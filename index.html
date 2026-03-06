@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ajinkya Hiswankar | Technical Sales & Hydraulic Systems Specialist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Technical Sales & Hydraulic Systems Specialist with 11+ years in mobile hydraulics, PLM, product management, process optimisation, and EMEA revenue growth. Available for consulting and full-time roles." />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-alt: #020617;
+      --card: #020617;
+      --accent: #ef4444;
+      --accent-soft: rgba(239,68,68,0.12);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --max-width: 960px;
+      --radius: 12px;
+      --shadow-soft: 0 18px 40px rgba(15,23,42,0.8);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #1f2937 0, #020617 45%, #000 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    main { max-width: var(--max-width); margin: 0 auto; padding: 2.5rem 1.5rem 3rem; }
+
+    header {
+      padding: 1.25rem 0 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    header .name { font-size: 1rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+    header nav a { font-size: 0.9rem; margin-left: 1.25rem; color: var(--muted); }
+    header nav a:hover { color: var(--text); }
+
+    .hero {
+      margin-top: 1.5rem;
+      padding: 2.25rem 2rem 2rem;
+      border-radius: 18px;
+      background: radial-gradient(circle at top left, rgba(248,250,252,0.05), transparent 60%) var(--bg-alt);
+      border: 1px solid rgba(148,163,184,0.25);
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+      gap: 1.75rem;
+      align-items: center;
+    }
+
+    .hero-left h1 { font-size: 2.2rem; margin: 0 0 0.5rem; }
+    .hero-left .tagline { font-size: 1.05rem; color: var(--muted); margin-bottom: 1.2rem; }
+    .hero-left .summary { font-size: 0.98rem; color: #d1d5db; margin-bottom: 1.6rem; max-width: 40rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+    .btn-primary, .btn-secondary {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 0.65rem 1.4rem; border-radius: 999px; font-size: 0.95rem; font-weight: 500;
+      cursor: pointer; transition: all 0.15s ease; white-space: nowrap;
+    }
+    .btn-primary { background: linear-gradient(to right, #ef4444, #f97316); color: #f9fafb; box-shadow: 0 10px 30px rgba(248,113,113,0.4); }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 14px 40px rgba(248,113,113,0.55); }
+    .btn-secondary { background: rgba(15,23,42,0.6); border: 1px solid rgba(148,163,184,0.5); color: var(--muted); }
+    .btn-secondary:hover { border-color: rgba(248,250,252,0.5); color: #e5e7eb; background: rgba(15,23,42,0.9); }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.1rem; font-size: 0.85rem; color: var(--muted); }
+    .hero-meta span { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.35rem 0.75rem; border-radius: 999px; background: rgba(15,23,42,0.9); border: 1px solid rgba(51,65,85,0.8); }
+    .hero-right { padding-left: 1rem; border-left: 1px solid rgba(51,65,85,0.8); }
+    .hero-right h2 { font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--muted); margin: 0 0 0.8rem; }
+    .hero-right p { font-size: 0.92rem; color: #d1d5db; margin: 0 0 0.7rem; }
+    .hero-right ul { list-style: none; padding: 0; margin: 0.5rem 0 0; font-size: 0.86rem; color: var(--muted); }
+    .hero-right li { margin-bottom: 0.35rem; }
+
+    section { margin-top: 2.75rem; }
+    section h2 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+    section p { margin-top: 0.4rem; color: #d1d5db; font-size: 0.95rem; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.1rem; margin-top: 1.2rem; }
+    .card { border-radius: var(--radius); background: radial-gradient(circle at top left, rgba(15,23,42,0.9), #020617); border: 1px solid rgba(31,41,55,0.9); padding: 1.1rem 1.1rem 1.05rem; font-size: 0.92rem; box-shadow: 0 18px 35px rgba(15,23,42,0.85); }
+    .card h3 { font-size: 1rem; margin-top: 0; margin-bottom: 0.4rem; }
+    .card .meta { font-size: 0.78rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.16em; margin-bottom: 0.6rem; }
+    .card ul { margin: 0.2rem 0 0; padding-left: 1.05rem; }
+    .card li { margin-bottom: 0.3rem; }
+
+    .cols-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 0.9rem; margin-top: 0.7rem; }
+    .cols-2 h3 { font-size: 0.95rem; margin-bottom: 0.5rem; }
+    .cols-2 ul { margin: 0; padding-left: 1.05rem; font-size: 0.9rem; }
+
+    /* Credentials */
+    .credentials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25rem; margin-top: 1.2rem; }
+    .credential-card { background: rgba(15,23,42,0.8); border: 1px solid rgba(55,65,81,0.95); padding: 1.4rem; border-radius: 16px; }
+    .credential-card h4 { margin: 0 0 0.6rem; color: var(--accent); }
+    .credential-quote { font-style: italic; margin: 0.8rem 0; color: #d1d5db; }
+    .credential-author { font-size: 0.88rem; color: var(--muted); margin-top: 0.4rem; }
+
+    .contact-card {
+      margin-top: 1.2rem; padding: 1.3rem 1.3rem 1.2rem; border-radius: 16px;
+      border: 1px solid rgba(55,65,81,0.95); background: radial-gradient(circle at top left, rgba(15,23,42,0.8), #020617);
+      box-shadow: 0 22px 45px rgba(15,23,42,0.9); display: flex; flex-wrap: wrap; gap: 1.2rem; align-items: center; justify-content: space-between;
+    }
+
+    .contact-text { max-width: 540px; font-size: 0.95rem; color: #e5e7eb; }
+    .contact-details { font-size: 0.9rem; color: var(--muted); }
+    .contact-details div { margin-bottom: 0.3rem; }
+    .contact-details strong { color: #e5e7eb; font-weight: 500; }
+
+    footer {
+      margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(31,41,55,0.9);
+      font-size: 0.82rem; color: var(--muted); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+    }
+
+    @media (max-width: 800px) {
+      .hero { grid-template-columns: minmax(0, 1fr); padding: 1.7rem 1.3rem 1.4rem; }
+      .hero-right { padding-left: 0; border-left: none; border-top: 1px solid rgba(51,65,85,0.8); margin-top: 1.1rem; padding-top: 1rem; }
+      header { flex-direction: column; align-items: flex-start; }
+      header nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="name">Ajinkya Hiswankar</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#services">Services</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Technical Sales & Hydraulic Systems Specialist</h1>
+        <div class="tagline">
+          Engineering Process Optimisation | PLM | Portfolio & Product Management | Project Management
+        </div>
+        <div class="summary">
+          I am a Technical Sales & Hydraulic Systems Specialist with 11+ years of experience in mobile hydraulics, PLM, product management, and process optimisation across EMEA. Available for external consulting projects and full-time roles.
+        </div>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Work with me</a>
+          <a href="#contact" class="btn-secondary">Full-time opportunities</a>
+          <a href="Ajinkya-Hiswankar_Resume_2026.pdf" class="btn-secondary" target="_blank" rel="noopener">View resume (PDF)</a>
+          <a href="https://www.linkedin.com/in/ahiswankar" class="btn-secondary" target="_blank" rel="noopener">View LinkedIn</a>
+        </div>
+        <div class="hero-meta">
+          <span>11+ years experience</span>
+          <span>EMEA · DACH · BeNeLux</span>
+          <span>Sønderborg, Denmark</span>
+        </div>
+      </div>
+      <div class="hero-right">
+        <h2>At a glance</h2>
+        <p>
+          Proven track record driving €35M+ revenue through technical sales, process optimisation, PLM implementation, and cross-functional project leadership.
+        </p>
+        <ul>
+          <li>Technical Sales & Hydraulic Systems Specialist</li>
+          <li>PLM, Siemens Teamcenter, NX, AutoCAD</li>
+          <li>Product & Portfolio Management</li>
+          <li>Engineering Process Optimisation</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        Technical Sales & Hydraulic Systems Specialist with 11+ years bridging mechanical engineering, technical sales, and commercial strategy. Deep expertise in mobile hydraulics, PLM implementation, product/portfolio management, project management, and engineering process optimisation across EMEA markets.
+      </p>
+      <p>
+        I help OEMs, distributors, and engineering teams turn complex requirements into scalable solutions – from hydraulic system design and application engineering to digital sales tools, process workflows, and revenue growth strategies.
+      </p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Technical Sales Specialist</h3>
+          <div class="meta">Danfoss Power Solutions · Denmark · 2022–2025</div>
+          <ul>
+            <li>Led hydraulic system development and deployment for EMEA off-road/industrial machinery</li>
+            <li>Managed €35M+ revenue across Austria, Switzerland, and BeNeLux OEM/distributor networks</li>
+            <li>Standardised EMEA application engineering workflows (trained 60+ engineers)</li>
+            <li>Designed digital sales tools and product configurators for remote-control systems</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Mechanical Design Engineer</h3>
+          <div class="meta">Danfoss Power Solutions · Denmark · 2018–2022</div>
+          <ul>
+            <li>Led PLM implementation and data migration using Siemens Teamcenter/NX</li>
+            <li>Optimised global supplier engineering processes (reduced casting rejections 95%)</li>
+            <li>Managed project lifecycles from concept to production (ISO/IATF compliant)</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Design Engineer</h3>
+          <div class="meta">Danfoss Power Solutions · India · 2014–2018</div>
+          <ul>
+            <li>Developed 3D models and drawings for hydraulic valves and components</li>
+            <li>Collaborated with suppliers/manufacturing to optimise design feasibility</li>
+            <li>Supported new product development and engineering change processes</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>Consulting Services</h2>
+      <p>
+        External consulting for OEMs, distributors, and engineering teams. Specialising in technical sales, hydraulic systems, and process optimisation.
+      </p>
+      <div class="grid">
+        <article class="card">
+          <h3>Technical Sales & Pre-Sales</h3>
+          <p>Value-based proposals, tender support, and customer application concepts for hydraulic systems.</p>
+        </article>
+        <article class="card">
+          <h3>Hydraulic Systems & Application Engineering</h3>
+          <p>System architecture, bill of materials, troubleshooting, and optimisation.</p>
+        </article>
+        <article class="card">
+          <h3>Engineering Process Optimisation</h3>
+          <p>Workflow redesign, supplier development, quality improvement, and standardisation.</p>
+        </article>
+        <article class="card">
+          <h3>PLM Implementation</h3>
+          <p>Siemens Teamcenter/NX setup, data migration, and structured data models.</p>
+        </article>
+        <article class="card">
+          <h3>Portfolio & Product Management</h3>
+          <p>Product lifecycle strategy, market analysis, and portfolio optimisation.</p>
+        </article>
+        <article class="card">
+          <h3>Project Management</h3>
+          <p>Cross-functional project leadership from concept to production.</p>
+        </article>
+        <article class="card">
+          <h3>Digital Sales Tools</h3>
+          <p>Product configurators, selection tools, and distributor enablement platforms.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="credentials">
+      <h2>Credentials & Recommendations</h2>
+      <div class="credentials-grid">
+        <article class="credential-card">
+          <h4>B.Tech Mechanical Engineering</h4>
+          <p><strong>First Division with Distinction</strong> – Dr. Babasaheb Ambedkar Marathwada University (2014)</p>
+          <p>Minor in Advanced Fluid Dynamics. Fully attested with MEA Apostille.</p>
+          <a href="Ajinkya-Hiswankar_Engg-Degree.pdf" target="_blank" class="btn-secondary" style="margin-top: 0.5rem; display: inline-block;">View Certificate</a>
+        </article>
+        <article class="credential-card">
+          <h4>Sanjay Bakle</h4>
+          <p class="credential-quote">"Ajinkya showed great potential... became a dependable resource supporting PLM, data migration, design testing... His contribution to various projects is highly appreciated."</p>
+          <p class="credential-author">Operations Director, Danfoss Power Solutions India (2024)</p>
+          <a href="Ajinkya-Hiswankar_LoR_Sanjay-Bakle.pdf" target="_blank" class="btn-secondary" style="margin-top: 0.5rem; display: inline-block;">View Letter</a>
+        </article>
+        <article class="credential-card">
+          <h4>Asger Flintholm</h4>
+          <p class="credential-quote">"Ajinkya was exceptional... instrumental in enhancing our product portfolio... His technical background combined with customer-centric approach make him a valuable asset."</p>
+          <p class="credential-author">Engineering Director, Danfoss Power Solutions Denmark (2024)</p>
+          <a href="Ajinkya-Hiswankar_LoR_Asger-Flintholm.pdf" target="_blank" class="btn-secondary" style="margin-top: 0.5rem; display: inline-block;">View Letter</a>
+        </article>
+        <article class="credential-card">
+          <h4>Ankit Shrivastava</h4>
+          <p class="credential-quote">"Outstanding technical expertise in hydraulics, PLM knowledge, customer focus, and team collaboration."</p>
+          <p class="credential-author">Regional Manager, Danfoss Germany (2023)</p>
+          <a href="Ajinkya-Hiswankar_LoR_Ankit-Shrivastava.pdf" target="_blank" class="btn-secondary" style="margin-top: 0.5rem; display: inline-block;">View Letter</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-card">
+        <div class="contact-text">
+          <p>Available immediately for consulting projects or full-time roles in technical sales, hydraulic systems, PLM, product management, or process optimisation.</p>
+        </div>
+        <div class="contact-details">
+          <div><strong>Email</strong><br /><a href="mailto:hiswankar.ajinkya@outlook.com">hiswankar.ajinkya@outlook.com</a></div>
+          <div><strong>Location</strong><br />Sønderborg, Denmark</div>
+          <div><strong>LinkedIn</strong><br /><a href="https://www.linkedin.com/in/ahiswankar" target="_blank" rel="noopener">linkedin.com/in/ahiswankar</a></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© 2026 Ajinkya Hiswankar</div>
+      <div>Technical Sales & Hydraulic Systems Specialist</div>
+    </footer>
+  </main>
+</body>
+</html>
