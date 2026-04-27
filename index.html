@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datum Matrix – Precision Engineering Consultancy</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial, Helvetica, sans-serif}
+    body{background:#fef8f0;color:#1a1a1a;line-height:1.6}
+    a{color:#b45309;text-decoration:none}
+    a:hover{color:#92400e}
+    header,main,footer{max-width:980px;margin:0 auto;padding:0 1.5rem}
+    header{position:sticky;top:0;background:rgba(254,248,240,0.95);backdrop-filter:blur(10px);padding:1.2rem 1.5rem;display:flex;justify-content:space-between;align-items:center;z-index:100;border-bottom:1px solid #e7d9c8}
+    header h1{font-size:1.1rem;letter-spacing:0.12em;text-transform:uppercase;color:#92400e;font-weight:700}
+    nav a{margin-left:1.25rem;font-size:0.9rem;color:#6b7280;font-weight:500}
+    nav a:hover{color:#b45309}
+    #hero{padding:4rem 1.5rem 3rem;text-align:left}
+    #hero h2{font-size:2.4rem;margin-bottom:0.75rem;color:#1a1a1a;font-weight:700;line-height:1.2}
+    #hero h3{font-size:1.15rem;margin-bottom:1.5rem;color:#6b7280;max-width:34rem;font-weight:400}
+    #hero p{max-width:34rem;margin-bottom:1rem;color:#374151}
+    .metrics{display:flex;flex-wrap:wrap;gap:1.5rem;margin-top:1.5rem}
+    .metric{min-width:130px}
+    .metric span{display:block}
+    .metric .value{font-size:1.4rem;font-weight:700;color:#b45309}
+    .metric .label{font-size:0.78rem;text-transform:uppercase;letter-spacing:0.08em;color:#9ca3af}
+    .cta{display:inline-block;margin-top:2rem;padding:0.8rem 1.6rem;border-radius:999px;background:#b45309;color:#fff;font-weight:600;font-size:0.95rem;transition:background 0.2s}
+    .cta:hover{background:#92400e;color:#fff}
+    section{padding:2.5rem 1.5rem;scroll-margin-top:80px}
+    section h2{font-size:1.4rem;margin-bottom:1.5rem;color:#1a1a1a;font-weight:700;border-bottom:2px solid #e7d9c8;padding-bottom:0.5rem}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.5rem}
+    .service-card{border:1px solid #e7d9c8;border-radius:0.75rem;padding:1.4rem;background:#fff;transition:all 0.2s ease}
+    .service-card:hover{box-shadow:0 4px 20px rgba(180,83,9,0.12);border-color:#b45309;transform:translateY(-2px)}
+    .service-card h3{font-size:1rem;margin-bottom:0.5rem;color:#1a1a1a;font-weight:600}
+    .service-card p{font-size:0.88rem;color:#6b7280;margin-bottom:0.4rem}
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+    .project-card{border:1px solid #e7d9c8;border-radius:0.75rem;padding:1.4rem;background:#fff;transition:all 0.2s ease}
+    .project-card:hover{box-shadow:0 4px 20px rgba(180,83,9,0.12);border-color:#b45309;transform:translateY(-2px)}
+    .project-card h3{font-size:1rem;margin-bottom:0.5rem;color:#1a1a1a;font-weight:600}
+    .project-card p{font-size:0.88rem;color:#6b7280;margin-bottom:0.4rem}
+    #experience ul{list-style:none;margin-top:0.5rem}
+    #experience li{margin-bottom:1rem;padding:1rem 1.2rem;border:1px solid #e7d9c8;border-radius:0.75rem;background:#fff;font-size:0.95rem;color:#1a1a1a;font-weight:600}
+    #experience li span{display:block;font-size:0.85rem;color:#6b7280;font-weight:400;margin-top:0.25rem}
+    #contact p{font-size:0.95rem;color:#374151;margin-bottom:0.6rem}
+    #contact a{color:#b45309;font-weight:500}
+    #contact a:hover{text-decoration:underline}
+    #booking{background:#fff;border:1px solid #e7d9c8;border-radius:1rem;padding:2rem;margin:0 1.5rem 1rem}
+    #booking h2{border-bottom:2px solid #e7d9c8;padding-bottom:0.5rem;margin-bottom:1rem}
+    #booking p{font-size:0.95rem;color:#374151;margin-bottom:1.2rem}
+    .book-btn{display:inline-block;padding:0.85rem 2rem;border-radius:999px;background:#b45309;color:#fff;font-weight:600;font-size:1rem;transition:background 0.2s;text-align:center}
+    .book-btn:hover{background:#92400e;color:#fff}
+    .book-note{display:block;font-size:0.8rem;color:#9ca3af;margin-top:0.75rem}
+    .cvr-bar{background:#f3ede4;border-top:1px solid #e7d9c8;padding:0.8rem 1.5rem;text-align:center;font-size:0.82rem;color:#9ca3af}
+    .cvr-bar span{color:#b45309;font-weight:600}
+    footer{padding:1.2rem 1.5rem 1rem;font-size:0.78rem;color:#9ca3af;text-align:left;border-top:1px solid #e7d9c8}
+    @media(max-width:640px){
+      #hero{padding-top:2.5rem}
+      #hero h2{font-size:1.8rem}
+      header{flex-direction:column;align-items:flex-start;gap:0.5rem}
+      nav a{margin-left:0;margin-right:0.75rem}
+      #booking{margin:0 0 1rem}
+    }
+  
+    nav a.active{color:#b45309;font-weight:700;border-bottom:2px solid #b45309;padding-bottom:2px}
+    nav a{transition:color 0.2s}
+</style>
+</head>
+<body>
+  <header>
+    <h1>Datum Matrix</h1>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#booking">Book Meeting</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero">
+      <h2>A single point of contact for engineering, sales and market development.</h2>
+      <h3>Datum Matrix is an independent consultancy that turns complex engineering, product and commercial challenges into clear, executable solutions — across automotive, off-highway, industrial and manufacturing sectors.</h3>
+      <p>Founded by Ajinkya Hiswankar, a mechanical engineer and technical sales specialist with 11 years at Danfoss Power Solutions across India and Denmark, supporting OEMs and distributors across EMEA.</p>
+      <p><strong>Datum</strong> – the reference that defines precision. <strong>Matrix</strong> – the interconnected system of teams, data and components. Together: clarity and control for your products and projects.</p>
+      <div class="metrics">
+        <div class="metric">
+          <span class="value">11+ years</span>
+          <span class="label">Industry experience</span>
+        </div>
+        <div class="metric">
+          <span class="value">&#8364;5M+</span>
+          <span class="label">Revenue influenced</span>
+        </div>
+        <div class="metric">
+          <span class="value">60+</span>
+          <span class="label">Engineers trained</span>
+        </div>
+      </div>
+      <a class="cta" href="mailto:ach@datum-matrix.com">Discuss your project &rarr; ach@datum-matrix.com</a>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <h2>How We Support Clients</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Project Consultancy</h3>
+          <p>Independent support from concept to SOP, including scoping, risk analysis, stakeholder alignment and technical-commercial decision support for complex programs.</p>
+        </div>
+        <div class="service-card">
+          <h3>Product Configurations &amp; Architecture</h3>
+          <p>Define modular architectures, variants and configuration logic so customers get the right solution quickly while engineering stays in control of complexity.</p>
+        </div>
+        <div class="service-card">
+          <h3>Engineering Systems &amp; Application Support</h3>
+          <p>Application and system engineering across hydraulics, mechanical and electromechanical domains — from sizing and schematics to validation, supplier coordination and design decisions for automotive, off-highway and industrial machinery.</p>
+        </div>
+        <div class="service-card">
+          <h3>PLM / Teamcenter Implementation</h3>
+          <p>Structure data models, workflows and naming conventions in Siemens Teamcenter to support reliable change management, reuse and consistency across teams.</p>
+        </div>
+        <div class="service-card">
+          <h3>EMEA Sales Development &amp; Market Entry</h3>
+          <p>Support for engineering companies and manufacturers entering or expanding in EMEA markets — including sales strategy, distributor development, technical presentations, customer acquisition and commercial partnership building across DACH, Benelux and the Nordics.</p>
+        </div>
+        <div class="service-card">
+          <h3>External Sales Partner</h3>
+          <p>Act as your dedicated sales representative in Europe. Datum Matrix can represent your engineering products and services to OEMs, distributors and procurement teams, building relationships and generating pipeline without the overhead of a local office.</p>
+        </div>
+        <div class="service-card">
+          <h3>Digital Sales Tool Development</h3>
+          <p>Design selection tools and configurators that translate engineering rules into guided selling experiences for distributors and sales teams.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="principles">
+  <h2>Principles Behind Every Engagement</h2>
+  <p class="principles-intro">Datum Matrix is built on disciplined engineering, dependable client support and a long-term view of technical progress. These principles guide every engagement from first conversation to final delivery.</p>
+  <div class="principles-grid">
+    <div class="principle-card">
+      <div class="principle-icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z"></path><path d="M9.5 12.5l1.7 1.7 3.8-4"></path></svg>
+      </div>
+      <h3>Integrity</h3>
+      <p>We work with transparency, honesty and accountability. Every recommendation is made in the long-term interest of the customer, the product and the project.</p>
+    </div>
+    <div class="principle-card">
+      <div class="principle-icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7L12 3 4 7v10l8 4 8-4V7z"></path><path d="M8 11h8"></path><path d="M8 15h5"></path></svg>
+      </div>
+      <h3>Quality in Delivery</h3>
+      <p>We focus on reliable delivery, technical clarity and responsive support. Quality is reflected not only in the final result, but also in the way we communicate, document and solve problems together.</p>
+    </div>
+    <div class="principle-card">
+      <div class="principle-icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6"></path><path d="M12 22v-4"></path><path d="M4.9 4.9l4.2 4.2"></path><path d="M14.9 14.9l4.2 4.2"></path><path d="M2 12h6"></path><path d="M16 12h6"></path><circle cx="12" cy="12" r="4"></circle></svg>
+      </div>
+      <h3>Forward-Looking Engineering</h3>
+      <p>We look beyond immediate fixes to build scalable, future-ready solutions. By combining engineering discipline with practical innovation, we help customers move forward with clarity and confidence.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Volvo EC35D Mini Excavator Reconstruction</h3>
+          <p>Full system rebuild from mechanical to electrohydraulic architecture across an off-highway vehicle platform. Integrated advanced electronic actuators and a software-controlled open-circuit pump, enabling precise digital control and real-time performance optimisation.</p>
+        </div>
+        <div class="project-card">
+          <h3>Engineering Data Structure Management</h3>
+          <p><strong>90% time saving:</strong> Cut documentation preparation from 3 days to 30 minutes through a programmable data-structure management system aligned with ISO and IATF 16949 standards.</p>
+          <p><strong>Supplier excellence:</strong> Redesigned engineering documentation using structured data models, improving clarity, compliance and cross-platform consistency in supplier communication.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul>
+        <li>Technical Sales Specialist – Danfoss Power Solutions (Nordborg, DK)
+          <span>Managed OEM and distributor networks in Austria, Switzerland and Benelux, aligning technical requirements with commercial strategy and growing revenue across EMEA markets.</span>
+        </li>
+        <li>Application &amp; Project Work
+          <span>Led development and deployment of advanced engineering systems for off-road, automotive and industrial machinery across EMEA markets.</span>
+        </li>
+        <li>Process &amp; Training
+          <span>Standardised application-engineering workflows across EMEA by training 60+ engineers and redesigning processes for clarity and speed.</span>
+        </li>
+        <li>Digital Tools
+          <span>Created digital sales tools and configuration platforms to simplify product selection and accelerate adoption of remote-control solutions.</span>
+        </li>
+        <li>Design Engineering – Danfoss (India &amp; Denmark)
+          <span>Background in 3D design, GD&amp;T, supplier collaboration and PLM, forming the technical foundation for all consultancy work.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- BOOK a MEETING -->
+    <section id="booking">
+      <h2>Book a Meeting</h2>
+      <p>Ready to discuss your engineering challenge, market entry or sales partnership? Schedule a 30-minute Microsoft Teams call directly in my calendar. No back-and-forth emails — just pick a time that works for you.</p>
+      <a class="book-btn" href="https://outlook.office.com/bookwithme/user/a37e58283f5a49668174f67b32552180@datum-matrix.com?anonymous&ismsaljsauthenabled&ep=pcard" target="_blank" rel="noopener noreferrer">
+  Book a Meeting
+</a>
+      
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Name: <a href="https://linkedin.com/in/ahiswankar" target="_blank" rel="noopener">Ajinkya Hiswankar</a></p>
+      <p>Email: <a href="mailto:ach@datum-matrix.com">ach@datum-matrix.com</a></p>
+      <p>Phone: <a href="tel:+4531893879">+45 31 89 38 79</a></p>
+      <p>Denmark &ndash; serving clients globally.</p>
+    </section>
+  </main>
+
+  <!-- CVR BAR -->
+  <div class="cvr-bar">
+    <span>CVR: 46416686</span> &nbsp;|&nbsp; Datum Matrix &copy; 2026. All rights reserved.
+  </div>
+
+  <footer>
+    Datum Matrix is an independent engineering consultancy based in Denmark.
+  </footer>
+
+
+
+<script>
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('nav a[href^="#"]');
+  const HEADER_HEIGHT = 85;
+
+  function setActive(id) {
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + id) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  // On click: immediately highlight the clicked link
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      const id = this.getAttribute('href').substring(1);
+      setActive(id);
+    });
+  });
+
+  // On scroll: highlight whichever section's top is closest to just below header
+  function onScroll() {
+    let currentId = '';
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= HEADER_HEIGHT + 10) {
+        currentId = section.id;
+      }
+    });
+    if (currentId) setActive(currentId);
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); // run on load
+</script>
+</body>
+</html>
